@@ -19,8 +19,6 @@
     * [Reseñas de Libros](#39-reseñas-de-libros)
     * [Programa "¡Dona un libro!"](#310-programa-dona-un-libro)
     * [Sistema de Lista de Espera](#311-sistema-de-lista-de-espera)
-4.  [Tecnologías Utilizadas](#4-tecnologías-utilizadas)
-5.  [Inspiración de Diseño](#5-inspiración-de-diseño)
 6.  [Estado del Proyecto y Hoja de Ruta](#6-estado-del-proyecto-y-hoja-de-ruta)
 7.  [Cómo Empezar (Desarrollo)](#7-cómo-empezar-desarrollo)
 8.  [Contribuciones](#8-contribuciones)
@@ -109,21 +107,6 @@ Inicialmente concebida y prototipada con Glide, el proyecto está migrando hacia
 
 * Gestiona la demanda de libros populares. Los usuarios de Nivel 5 o superior tienen **acceso prioritario** para arrendar libros en lista de espera sin pasar por la cola.
 
-## 4. Tecnologías Utilizadas
-
-* **Backend:**
-    * **Firebase:** Firestore (Base de datos NoSQL), Authentication (autenticación de usuarios), Storage (almacenamiento de archivos como portadas de libros y eBooks), Cloud Functions (lógica de negocio del backend, cálculo de puntos, validaciones, etc.).
-* **Frontend (Web/PWA - `libroypuntoapp.cl`):**
-    * **TypeScript:** Para un código más robusto, escalable y con menos errores.
-    * **Next.js:** Framework de React para aplicaciones web de alto rendimiento con SSR/SSG, optimización y rutas basadas en archivos.
-    * **Tailwind CSS:** Framework CSS utility-first para un diseño flexible, personalizado y eficiente (especialmente para el `dark mode`).
-* **Desarrollo Previo (Prototipo/Versión Actual en Transición):**
-    * **Glide:** Utilizado para el prototipo inicial y la versión actual en producción mientras se desarrolla la nueva plataforma.
-
-## 5. Inspiración de Diseño
-
-El diseño de "Libro y Punto" se inspira en la estética de **HaNet**, buscando una interfaz de usuario limpia, moderna, intuitiva y visualmente atractiva, con una preferencia por el modo oscuro y acentos de color vibrantes. La navegación es clara y sencilla, con énfasis en la experiencia del usuario.
-
 ## 6. Estado del Proyecto y Hoja de Ruta
 
 El proyecto se encuentra en una fase de transición crucial, desarrollando la versión robusta y escalable sobre Firebase.
@@ -133,38 +116,11 @@ El proyecto se encuentra en una fase de transición crucial, desarrollando la ve
 * **Próximas Versiones (Hoja de Ruta):** La versión 7.0.0b es la antesala a la 1.0.0. Ya se está trabajando en la **versión 6.2.0-TZ**, que incluirá la función de **"Favoritos"** para que los usuarios puedan guardar sus libros preferidos o pendientes.
 
 ## 7. Cómo Empezar (Desarrollo)
-
-Para configurar el proyecto localmente (una vez el repositorio sea público):
-
-1.  **Clona el repositorio:**
-    ```bash
-    git clone [https://github.com/tu-usuario/libro-y-punto.git](https://github.com/tu-usuario/libro-y-punto.git)
-    cd libro-y-punto
-    ```
-2.  **Configura Firebase:**
-    * Crea un proyecto en Firebase y configura Firestore, Authentication, Storage y Cloud Functions.
-    * Obtén tus credenciales de Firebase y configúralas en tu archivo de entorno (ej. `.env.local` para Next.js).
-3.  **Instala dependencias:**
-    ```bash
-    npm install # o yarn install
-    ```
-4.  **Ejecuta el servidor de desarrollo:**
-    ```bash
-    npm run dev # o yarn dev
-    ```
-    La aplicación debería estar disponible en `http://localhost:3000`.
-
-*(Nota: Los pasos específicos de configuración de Firebase y Cloud Functions se detallarán en una sección de Wiki o en el código mismo.)*
+*Pronto!!*
 
 ## 8. Contribuciones
 
-¡Las contribuciones son bienvenidas! Si estás interesado en mejorar este proyecto, por favor, sigue estos pasos:
-
-1.  Haz un "fork" del repositorio.
-2.  Crea una nueva rama (`git checkout -b feature/AmazingFeature`).
-3.  Realiza tus cambios y commitea (`git commit -m 'Add some AmazingFeature'`).
-4.  Haz "push" a la rama (`git push origin feature/AmazingFeature`).
-5.  Abre un "Pull Request".
+Idk JASJKAKJAKJASJKASK
 
 ## 9. Licencia
 
@@ -173,7 +129,6 @@ Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENS
 ## 10. Contacto
 
 * **Creador:** Martín Ávila
-* **Correo Electrónico:** [Tu correo electrónico]
-* **Sitio Web del Proyecto:** [https://libroypuntoapp.cl](https://libroypuntoapp.cl) (cuando esté operativo)
+* **Correo Electrónico:** martinavilads@gmail.com
 
 ---
