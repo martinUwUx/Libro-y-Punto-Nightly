@@ -85,33 +85,34 @@ fun QrScanner(
                                 .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
                                 .build()
                                 .also { imageAnalysis ->
-                                    imageAnalysis.setAnalyzer(cameraExecutor) { imageProxy ->
-                                        @OptIn(androidx.camera.core.ExperimentalGetImage::class)
-                                        val mediaImage = imageProxy.image
-                                        if (mediaImage != null) {
-                                            val image = InputImage.fromMediaImage(
-                                                mediaImage,
-                                                imageProxy.imageInfo.rotationDegrees
-                                            )
-                                            
-                                            val scanner = BarcodeScanning.getClient()
-                                            scanner.process(image)
-                                                .addOnSuccessListener { barcodes ->
-                                                    for (barcode in barcodes) {
-                                                        if (barcode.format == Barcode.FORMAT_QR_CODE) {
-                                                            barcode.rawValue?.let { qrContent ->
-                                                                onQrCodeScanned(qrContent)
+                                    imageAnalysis.setAnalyzer(cameraExecutor, object : ImageAnalysis.Analyzer {
+                                        @androidx.camera.core.ExperimentalGetImage
+                                        override fun analyze(imageProxy: ImageProxy) {
+                                            val mediaImage = imageProxy.image
+                                            if (mediaImage != null) {
+                                                val image = InputImage.fromMediaImage(
+                                                    mediaImage,
+                                                    imageProxy.imageInfo.rotationDegrees
+                                                )
+                                                val scanner = BarcodeScanning.getClient()
+                                                scanner.process(image)
+                                                    .addOnSuccessListener { barcodes ->
+                                                        for (barcode in barcodes) {
+                                                            if (barcode.format == Barcode.FORMAT_QR_CODE) {
+                                                                barcode.rawValue?.let { qrContent ->
+                                                                    onQrCodeScanned(qrContent)
+                                                                }
                                                             }
                                                         }
                                                     }
-                                                }
-                                                .addOnCompleteListener {
-                                                    imageProxy.close()
-                                                }
-                                        } else {
-                                            imageProxy.close()
+                                                    .addOnCompleteListener {
+                                                        imageProxy.close()
+                                                    }
+                                            } else {
+                                                imageProxy.close()
+                                            }
                                         }
-                                    }
+                                    })
                                 }
                             
                             try {

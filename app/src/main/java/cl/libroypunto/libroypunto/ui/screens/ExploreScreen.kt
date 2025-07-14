@@ -52,6 +52,7 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.foundation.clickable
+import cl.libroypunto.libroypunto.model.LibroCatalogo
 
 // Modelo de datos para un libro destacado
 data class LibroDestacado(
@@ -62,21 +63,6 @@ data class LibroDestacado(
     val chips: List<String> = emptyList(),
     val visible: Boolean = true,
     val orden: Int = 0
-)
-
-// Modelo de datos para un libro del catálogo
-
-data class LibroCatalogo(
-    val id: String = "",
-    val titulo: String = "",
-    val autor: String = "",
-    val editorial: String = "",
-    val imagenUrl: String = "",
-    val destacado: Boolean = false,
-    val digital: Boolean = false,
-    val chips: List<String> = emptyList(),
-    val disponible: Int = 0,
-    val sinopsis: String = ""
 )
 
 class ExploreViewModel : ViewModel() {

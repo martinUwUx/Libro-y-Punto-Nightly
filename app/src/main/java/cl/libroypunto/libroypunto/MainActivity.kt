@@ -43,7 +43,6 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import cl.libroypunto.libroypunto.ui.screens.DetalleLibroScreen
 import cl.libroypunto.libroypunto.ui.screens.ExploreScreen
-import cl.libroypunto.libroypunto.ui.screens.LibroCatalogo
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.compose.foundation.layout.Box
 import androidx.compose.ui.Alignment

@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "cl.libroypunto.libroypunto"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "cl.libroypunto.libroypunto"
         minSdk = 28
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "Alpha 1.0"
 
@@ -54,12 +54,13 @@ android {
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(platform(libs.androidx.compose.bom)) // BOM manages versions
     implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.foundation)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.tooling)
+    implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.credentials)
     implementation(libs.androidx.credentials.play.services.auth)
     implementation(libs.googleid)
@@ -99,5 +100,4 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended")
     implementation("com.google.accompanist:accompanist-pager:0.34.0")
     implementation("com.google.accompanist:accompanist-pager-indicators:0.34.0")
-    implementation(libs.androidx.foundation)
 }
